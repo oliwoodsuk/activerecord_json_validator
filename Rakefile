@@ -21,3 +21,5 @@ task :console do
   ARGV.clear
   IRB.start
 end
+
+task :test => 'spec'

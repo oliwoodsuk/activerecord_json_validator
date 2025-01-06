@@ -170,6 +170,11 @@ The tests require a database. We've provided a simple `docker-compose.yml` that 
 it trivial to run the tests against PostgreSQL. Simply run `docker compose up -d`
 followed by `rake spec`. When you're done, run `docker compose down` to stop the database.
 
+You may also need to create the database manually:
+```bash
+psql -h localhost -U postgres -c "CREATE DATABASE activerecord_json_validator_test;"
+```
+
 In order to use another database, simply define the `DATABASE_URL` environment variable
 appropriately.
 
